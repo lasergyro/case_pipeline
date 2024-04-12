@@ -1,0 +1,18 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "case_pipeline"
+version = "v0.1.0"
+description = "Ovito wrapper"
+keywords = ["ovito",]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ovito>=3.10.2",
+]
