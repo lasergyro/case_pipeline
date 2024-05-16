@@ -8,8 +8,6 @@ from pathlib import Path
 from traceback import print_exc
 from typing import Protocol, TypeVar, cast
 
-# import beartype
-# import beartype.door
 import numpy as np
 import numpy.typing as npt
 from ovito.data import DataCollection, PropertyContainer
@@ -106,6 +104,7 @@ class CaseCache:
         return self.path / "in.data"
 
     def _make_pipeline(self):
+        """Must set self.num_frames and return a pipeline object"""
         from ovito.io import import_file
 
         # Data import:
